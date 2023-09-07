@@ -25,7 +25,7 @@ let userInput01;
 let userInput02;
 let answer;
 
-num_01.onclick = function displayNum01() {
+num_01.onclick = function () {
 	if (textDisplay.innerHTML == "") {
 		textDisplay.innerHTML = 1;
 	} else {
@@ -33,7 +33,7 @@ num_01.onclick = function displayNum01() {
 	}
 };
 
-num_02.onclick = function displayNum02() {
+num_02.onclick = function () {
 	if (textDisplay.innerHTML == "") {
 		textDisplay.innerHTML = 2;
 	} else {
@@ -41,7 +41,7 @@ num_02.onclick = function displayNum02() {
 	}
 };
 
-num_03.onclick = function displayNum03() {
+num_03.onclick = function () {
 	if (textDisplay.innerHTML == "") {
 		textDisplay.innerHTML = 3;
 	} else {
@@ -49,7 +49,7 @@ num_03.onclick = function displayNum03() {
 	}
 };
 
-num_04.onclick = function displayNum04() {
+num_04.onclick = function () {
 	if (textDisplay.innerHTML == "") {
 		textDisplay.innerHTML = 4;
 	} else {
@@ -57,7 +57,7 @@ num_04.onclick = function displayNum04() {
 	}
 };
 
-num_05.onclick = function displayNum05() {
+num_05.onclick = function () {
 	if (textDisplay.innerHTML == "") {
 		textDisplay.innerHTML = 5;
 	} else {
@@ -65,7 +65,7 @@ num_05.onclick = function displayNum05() {
 	}
 };
 
-num_06.onclick = function displayNum06() {
+num_06.onclick = function () {
 	if (textDisplay.innerHTML == "") {
 		textDisplay.innerHTML = 6;
 	} else {
@@ -73,7 +73,7 @@ num_06.onclick = function displayNum06() {
 	}
 };
 
-num_07.onclick = function displayNum07() {
+num_07.onclick = function () {
 	if (textDisplay.innerHTML == "") {
 		textDisplay.innerHTML = 7;
 	} else {
@@ -81,7 +81,7 @@ num_07.onclick = function displayNum07() {
 	}
 };
 
-num_08.onclick = function displayNum08() {
+num_08.onclick = function () {
 	if (textDisplay.innerHTML == "") {
 		textDisplay.innerHTML = 8;
 	} else {
@@ -89,7 +89,7 @@ num_08.onclick = function displayNum08() {
 	}
 };
 
-num_09.onclick = function displayNum09() {
+num_09.onclick = function () {
 	if (textDisplay.innerHTML == "") {
 		textDisplay.innerHTML = 9;
 	} else {
@@ -97,7 +97,7 @@ num_09.onclick = function displayNum09() {
 	}
 };
 
-num_0.onclick = function displayNum0() {
+num_0.onclick = function () {
 	if (textDisplay.innerHTML == "") {
 		textDisplay.innerHTML = 0;
 	} else {
@@ -145,6 +145,12 @@ divide.onclick = function () {
 	}
 };
 
+clear.onclick = function () {
+	if (textDisplay.innerHTML != "") {
+		textDisplay.innerHTML = "";
+	}
+};
+
 equals.onclick = function () {
 	userInput02 = textDisplay.innerHTML;
 
@@ -164,11 +170,5 @@ equals.onclick = function () {
 		answer = Number(userInput01) / Number(userInput02);
 		textDisplay.innerHTML = answer;
 		isDivide = false;
-	}
-};
-
-clear.onclick = function () {
-	if (textDisplay.innerHTML != "") {
-		textDisplay.innerHTML = "";
 	}
 };
