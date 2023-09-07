@@ -1,4 +1,4 @@
-Simple-Calculator
+### Simple Calculator
 
 ![Screenshot](./app/design/Screenshot.png)
 

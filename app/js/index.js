@@ -1,4 +1,4 @@
-const textDisplay = document.querySelector("#text-field");
+const mainDisplay = document.querySelector("#text-field");
 const clear = document.querySelector("#clear");
 const num_01 = document.querySelector("#num-01");
 const num_02 = document.querySelector("#num-02");
@@ -26,149 +26,149 @@ let userInput02;
 let answer;
 
 num_01.onclick = function () {
-	if (textDisplay.innerHTML == "") {
-		textDisplay.innerHTML = 1;
+	if (mainDisplay.textContent == "") {
+		mainDisplay.textContent = 1;
 	} else {
-		textDisplay.innerHTML = textDisplay.innerHTML + 1;
+		mainDisplay.textContent = mainDisplay.textContent + 1;
 	}
 };
 
 num_02.onclick = function () {
-	if (textDisplay.innerHTML == "") {
-		textDisplay.innerHTML = 2;
+	if (mainDisplay.textContent == "") {
+		mainDisplay.textContent = 2;
 	} else {
-		textDisplay.innerHTML = textDisplay.innerHTML + 2;
+		mainDisplay.textContent = mainDisplay.textContent + 2;
 	}
 };
 
 num_03.onclick = function () {
-	if (textDisplay.innerHTML == "") {
-		textDisplay.innerHTML = 3;
+	if (mainDisplay.textContent == "") {
+		mainDisplay.textContent = 3;
 	} else {
-		textDisplay.innerHTML = textDisplay.innerHTML + 3;
+		mainDisplay.textContent = mainDisplay.textContent + 3;
 	}
 };
 
 num_04.onclick = function () {
-	if (textDisplay.innerHTML == "") {
-		textDisplay.innerHTML = 4;
+	if (mainDisplay.textContent == "") {
+		mainDisplay.textContent = 4;
 	} else {
-		textDisplay.innerHTML = textDisplay.innerHTML + 4;
+		mainDisplay.textContent = mainDisplay.textContent + 4;
 	}
 };
 
 num_05.onclick = function () {
-	if (textDisplay.innerHTML == "") {
-		textDisplay.innerHTML = 5;
+	if (mainDisplay.textContent == "") {
+		mainDisplay.textContent = 5;
 	} else {
-		textDisplay.innerHTML = textDisplay.innerHTML + 5;
+		mainDisplay.textContent = mainDisplay.textContent + 5;
 	}
 };
 
 num_06.onclick = function () {
-	if (textDisplay.innerHTML == "") {
-		textDisplay.innerHTML = 6;
+	if (mainDisplay.textContent == "") {
+		mainDisplay.textContent = 6;
 	} else {
-		textDisplay.innerHTML = textDisplay.innerHTML + 6;
+		mainDisplay.textContent = mainDisplay.textContent + 6;
 	}
 };
 
 num_07.onclick = function () {
-	if (textDisplay.innerHTML == "") {
-		textDisplay.innerHTML = 7;
+	if (mainDisplay.textContent == "") {
+		mainDisplay.textContent = 7;
 	} else {
-		textDisplay.innerHTML = textDisplay.innerHTML + 7;
+		mainDisplay.textContent = mainDisplay.textContent + 7;
 	}
 };
 
 num_08.onclick = function () {
-	if (textDisplay.innerHTML == "") {
-		textDisplay.innerHTML = 8;
+	if (mainDisplay.textContent == "") {
+		mainDisplay.textContent = 8;
 	} else {
-		textDisplay.innerHTML = textDisplay.innerHTML + 8;
+		mainDisplay.textContent = mainDisplay.textContent + 8;
 	}
 };
 
 num_09.onclick = function () {
-	if (textDisplay.innerHTML == "") {
-		textDisplay.innerHTML = 9;
+	if (mainDisplay.textContent == "") {
+		mainDisplay.textContent = 9;
 	} else {
-		textDisplay.innerHTML = textDisplay.innerHTML + 9;
+		mainDisplay.textContent = mainDisplay.textContent + 9;
 	}
 };
 
 num_0.onclick = function () {
-	if (textDisplay.innerHTML == "") {
-		textDisplay.innerHTML = 0;
+	if (mainDisplay.textContent == "") {
+		mainDisplay.textContent = 0;
 	} else {
-		textDisplay.innerHTML = textDisplay.innerHTML + 0;
+		mainDisplay.textContent = mainDisplay.textContent + 0;
 	}
 };
 
 sum.onclick = function () {
-	if (textDisplay.innerHTML == "") {
+	if (mainDisplay.textContent == "") {
 		return;
 	} else {
-		userInput01 = textDisplay.innerHTML;
+		userInput01 = mainDisplay.textContent;
 		isAdding = true;
-		textDisplay.innerHTML = "";
+		mainDisplay.textContent = "";
 	}
 };
 
 subtract.onclick = function () {
-	if (textDisplay.innerHTML == "") {
+	if (mainDisplay.textContent == "") {
 		return;
 	} else {
-		userInput01 = textDisplay.innerHTML;
+		userInput01 = mainDisplay.textContent;
 		isSubtract = true;
-		textDisplay.innerHTML = "";
+		mainDisplay.textContent = "";
 	}
 };
 
 multiply.onclick = function () {
-	if (textDisplay.innerHTML == "") {
+	if (mainDisplay.textContent == "") {
 		return;
 	} else {
-		userInput01 = textDisplay.innerHTML;
+		userInput01 = mainDisplay.textContent;
 		isMultiply = true;
-		textDisplay.innerHTML = "";
+		mainDisplay.textContent = "";
 	}
 };
 
 divide.onclick = function () {
-	if (textDisplay.innerHTML == "") {
+	if (mainDisplay.textContent == "") {
 		return;
 	} else {
-		userInput01 = textDisplay.innerHTML;
+		userInput01 = mainDisplay.textContent;
 		isDivide = true;
-		textDisplay.innerHTML = "";
+		mainDisplay.textContent = "";
 	}
 };
 
 clear.onclick = function () {
-	if (textDisplay.innerHTML != "") {
-		textDisplay.innerHTML = "";
+	if (mainDisplay.textContent != "") {
+		mainDisplay.textContent = "";
 	}
 };
 
 equals.onclick = function () {
-	userInput02 = textDisplay.innerHTML;
+	userInput02 = mainDisplay.textContent;
 
 	if (isAdding) {
 		answer = Number(userInput01) + Number(userInput02);
-		textDisplay.innerHTML = answer;
+		mainDisplay.textContent = answer;
 		isAdding = false;
 	} else if (isSubtract) {
 		answer = Number(userInput01) - Number(userInput02);
-		textDisplay.innerHTML = answer;
+		mainDisplay.textContent = answer;
 		isSubtract = false;
 	} else if (isMultiply) {
 		answer = Number(userInput01) * Number(userInput02);
-		textDisplay.innerHTML = answer;
+		mainDisplay.textContent = answer;
 		isMultiply = false;
 	} else if (isDivide) {
 		answer = Number(userInput01) / Number(userInput02);
-		textDisplay.innerHTML = answer;
+		mainDisplay.textContent = answer;
 		isDivide = false;
 	}
 };
